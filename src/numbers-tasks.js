@@ -297,16 +297,11 @@ function getFibonacciNumber(index) {
  *   1  => 1
  */
 function getSumToN(n) {
-  if (n <= 1) {
-    return n;
+  let sum2 = 0;
+  for (let i = 1; i <= n; i += 1) {
+    sum2 += i;
   }
-  const rez = [0, 1];
-  for (let i = 2; i <= n; i += 1) {
-    rez.push(i);
-  }
-  return rez.reduce(function (sum, current) {
-    return sum + current;
-  }, 0);
+  return sum2;
 }
 
 /**
