@@ -664,13 +664,22 @@ function getHypotenuse(a, b) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  const qqq = [];
-  for (let i = 0; i <= number; i += 1) {
-    if (i % 2 !== 0) {
-      qqq.push(i);
+  let qweqwe = 0;
+  if (number > 0) {
+    for (let i = 0; i <= number; i += 1) {
+      if (i % 2 !== 0) {
+        qweqwe += 1;
+      }
     }
   }
-  return qqq.length;
+  if (number < 0) {
+    for (let i = 0; i >= number; i -= 1) {
+      if (i % 2 !== 0) {
+        qweqwe += 1;
+      }
+    }
+  }
+  return qweqwe;
 }
 
 module.exports = {
